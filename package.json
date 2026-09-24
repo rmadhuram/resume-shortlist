@@ -5,7 +5,9 @@
   "scripts": {
     "build": "npx tsc",
     "watch": "npx tsc --watch",
-    "start": "npx tsc && node build/index.js"
+    "start": "npx tsc && node build/index.js",
+    "jev": "npx tsc && node build/jev-rescore.js",
+    "jev:analyze": "node jev-analyze.js jev-scored.csv jev-stats.json"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
@@ -14,6 +16,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.33.1",
+    "@typesafe-ai/sdk": "^0.6.0",
     "dotenv": "^16.4.7",
     "pdf-parse": "^1.1.1",
     "pdf2json": "^3.1.4"
